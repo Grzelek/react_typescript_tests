@@ -1,12 +1,12 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`test komponentu DisplayText jest zgodny z migawka 1`] = `
+exports[`test component DisplayText jest zgodny z migawka 1`] = `
 <body>
   <div>
     <form>
       <div>
         <label>
-          jak masz na imie chuju?
+          what is your name?
         </label>
       </div>
       <div>
@@ -19,7 +19,7 @@ exports[`test komponentu DisplayText jest zgodny z migawka 1`] = `
         <button
           data-testid="input-submit"
         >
-          wyswietl komunikat
+          display info
         </button>
       </div>
       <div>

@@ -4,13 +4,13 @@ import DisplayText from "./DisplayText"
 import "@testing-library/jest-dom/extend-expect"
 import { getValue } from "@testing-library/user-event/dist/utils"
 
-describe("test komponentu DisplayText", ()=>{
-    it("jest wyswietlany bez problemow",()=>{
+describe("test component DisplayText", ()=>{
+    it("no any issue",()=>{
         const{baseElement} = render(<DisplayText />)
         console.log(baseElement.innerHTML)
         expect(baseElement).toBeInTheDocument()
     })
-    it("uzyskuje text z pola", ()=>{
+    it("recived text from field", ()=>{
         const testuser = "testuser";
         const {getByTestId} = render(<DisplayText />)
         const input = getByTestId("user-in");
@@ -18,9 +18,9 @@ describe("test komponentu DisplayText", ()=>{
         expect(input).toBeInTheDocument();
         expect(input).toHaveValue(testuser)
     })
-    it("Wyswietla komunikat powitalny", ()=>{
+    it("displayed welcome text", ()=>{
         const testuser = "testuser";
-        const msg = `witaj na tescie reacta, ${testuser}!`;
+        const msg = `hello in react test, ${testuser}!`;
         const {getByTestId} = render(<DisplayText />)
         const input = getByTestId("user-in");
         const label = getByTestId("final-msg");
