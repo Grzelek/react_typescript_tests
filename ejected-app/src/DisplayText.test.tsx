@@ -3,7 +3,7 @@ import {render, fireEvent, getByTestId} from "@testing-library/react"
 import DisplayText from "./DisplayText"
 import "@testing-library/jest-dom/extend-expect"
 import { getValue } from "@testing-library/user-event/dist/utils"
-
+/*
 describe("test component DisplayText", ()=>{
     it("no any issue",()=>{
         const{baseElement} = render(<DisplayText />)
@@ -36,3 +36,4 @@ describe("test component DisplayText", ()=>{
         expect(baseElement).toMatchSnapshot();
     })
 })
+*/

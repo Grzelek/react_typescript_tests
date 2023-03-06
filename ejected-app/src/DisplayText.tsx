@@ -1,16 +1,20 @@
-import React, {useState} from "react";
+import React, {useState, FC} from "react";
 
-const DisplayText = () => {
+interface DisplayTextprops{
+    getUserFullname: (username: string) => Promise<string>
+}
+
+const DisplayText: FC<DisplayTextprops> = ({getUserFullname}) => {
     const [txt, setTxt] = useState("")
     const [msg, setMsg] = useState("")
     const onChangeTxt = (e: React.ChangeEvent<HTMLInputElement>) =>{
         setTxt(e.target.value);
     }
 
-    const onClickShowMsg = (e: React.MouseEvent<HTMLButtonElement, MouseEvent>) =>{
+    const onClickShowMsg = async (e: React.MouseEvent<HTMLButtonElement, MouseEvent>) =>{
         e.preventDefault();
     
-        setMsg(`hello in react test, ${txt}!`)
+        setMsg(`hello in react test, ${await getUserFullname(txt)}!`)
     }
     return (
         <form>
