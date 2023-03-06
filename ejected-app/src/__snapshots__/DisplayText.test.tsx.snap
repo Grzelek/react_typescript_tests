@@ -1,33 +1,13 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`test component DisplayText displayed welcome text 1`] = `
+<label
+  data-testid="final-msg"
+/>
+`;
+
 exports[`test component DisplayText jest zgodny z migawka 1`] = `
-<body>
-  <div>
-    <form>
-      <div>
-        <label>
-          what is your name?
-        </label>
-      </div>
-      <div>
-        <input
-          data-testid="user-in"
-          value=""
-        />
-      </div>
-      <div>
-        <button
-          data-testid="input-submit"
-        >
-          display info
-        </button>
-      </div>
-      <div>
-        <label
-          data-testid="final-msg"
-        />
-      </div>
-    </form>
-  </div>
-</body>
+<label
+  data-testid="final-msg"
+/>
 `;
